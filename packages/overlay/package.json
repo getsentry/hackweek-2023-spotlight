@@ -39,6 +39,7 @@
     "usehooks-ts": "^2.9.1"
   },
   "devDependencies": {
+    "@rollup/plugin-inject": "^5.0.5",
     "@sentry/types": "^7.77.0",
     "@spotlightjs/tsconfig": "workspace:*",
     "@types/react": "^18.2.37",

@@ -18,6 +18,9 @@ export default defineConfig({
       '~': resolve(__dirname, 'src'),
     },
   },
+  define: {
+    'process.env.NODE_ENV': '"production"',
+  },
   build: {
     lib: {
       // Could also be a dictionary or array of multiple entry points
@@ -27,16 +30,11 @@ export default defineConfig({
       fileName: 'sentry-spotlight',
     },
     // rollupOptions: {
-    //   // make sure to externalize deps that shouldn't be bundled
-    //   // into your library
-    //   external: ["vue"],
-    //   output: {
-    //     // Provide global variables to use in the UMD build
-    //     // for externalized deps
-    //     globals: {
-    //       vue: "Vue",
-    //     },
-    //   },
+    //   plugins: [
+    //     inject({
+    //       process: 'process',
+    //     }),
+    //   ],
     // },
   },
 });
